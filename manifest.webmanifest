@@ -1,0 +1,78 @@
+{
+  "id": "./",
+  "name": "Proskills · Khoa Kỹ năng JPC",
+  "short_name": "Proskills",
+  "description": "Các khóa e-learning của Khoa Kỹ năng, JPC: Career Design, Kiến thức quy định và các khóa khác.",
+  "lang": "vi",
+  "dir": "ltr",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0F4D98",
+  "theme_color": "#F4F6FE",
+  "categories": [
+    "education"
+  ],
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "./icons/app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Check-in hôm nay",
+      "short_name": "Check-in",
+      "description": "Mở Shin Routine để check-in hôm nay",
+      "url": "./routine/index.html?ci=1#checkin",
+      "icons": [
+        {
+          "src": "./icons/sc-checkin.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Lịch học",
+      "short_name": "Lịch học",
+      "description": "Xem và sửa lịch học của tôi",
+      "url": "./?lich=1",
+      "icons": [
+        {
+          "src": "./icons/sc-lich.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Học tiếp",
+      "short_name": "Học tiếp",
+      "description": "Mở lại khóa học gần nhất",
+      "url": "./?go=last",
+      "icons": [
+        {
+          "src": "./icons/sc-hoctiep.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+/* =========================================================
+   PROSKILLS · LÕI CHUNG (core.css)
+   Kiểu cho phần dùng chung: thẻ Cài đặt chuẩn, hộp thoại, thông báo, nút.
+   Mọi lớp bắt đầu bằng "ps-" để không đụng kiểu của module.
+   Dùng màu của module qua biến --c, --c-d, --c-t (có giá trị dự phòng).
+   ========================================================= */
+.ps-ic{flex:none;display:inline-block;vertical-align:middle}
+.ps-lock{overflow:hidden}
+
+/* ---- nút ---- */
+.ps-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15.5px/1.25 var(--f,"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif);
+  background:var(--c,#24307A);color:#fff;border:0;border-radius:16px;padding:13px 18px;cursor:pointer;text-decoration:none;
+  box-shadow:0 3px 0 var(--c-d,#151D52),0 8px 18px -12px rgba(21,29,82,.8);transition:transform .18s cubic-bezier(.32,.72,0,1),box-shadow .18s;-webkit-tap-highlight-color:transparent}
+.ps-btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--c-d,#151D52)}
+.ps-btn--sm{font-size:14.5px;padding:10px 14px;border-radius:14px}
+.ps-btn--soft{background:var(--c-t,#ECEEFA);color:var(--c-d,#151D52);box-shadow:0 3px 0 var(--c-t2,#D8DCF2)}
+.ps-btn--go{background:var(--ps-go,#F4B63B);color:#3B2A00;box-shadow:0 3px 0 #C98A12,0 8px 18px -12px rgba(201,138,18,.9)}
+.ps-btn--danger{background:#C8372D;color:#fff;box-shadow:0 3px 0 #8E241D}
+.ps-btn--dangersoft{background:#FDECE8;color:#B23A28;box-shadow:0 3px 0 #F6C3B9}
+.ps-btn:disabled{background:#C3C8DB;box-shadow:0 3px 0 #AEB4CB;cursor:not-allowed}
+.ps-btnrow{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 4px}
+.ps-link{display:inline-flex;align-items:center;gap:6px;border:0;background:none;color:var(--c-d,#151D52);font:600 14px/1.4 var(--f,system-ui);text-decoration:underline;text-underline-offset:3px;padding:6px 0;cursor:pointer}
+.ps-small{font-size:13.5px;line-height:1.6;color:var(--ink-2,#4A5275);margin:8px 0}
+.ps-warn{font-size:13.5px;color:#B23A28;background:#FDECE8;border-radius:12px;padding:8px 12px}
+
+/* ---- ô nhập ---- */
+.ps-form{display:grid;gap:12px;margin:6px 0}
+.ps-form label{display:grid;gap:6px;font-size:13.5px;font-weight:600;color:var(--ink-2,#4A5275)}
+.ps-row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ps-inp{width:100%;box-sizing:border-box;font:500 16px/1.4 var(--f,system-ui);color:var(--ink,#18203F);background:#fff;border:1.5px solid var(--rule,#E3E7F5);border-radius:14px;padding:11px 13px;-webkit-appearance:none;appearance:none}
+select.ps-inp{background-image:linear-gradient(45deg,transparent 50%,#7A82A3 50%),linear-gradient(135deg,#7A82A3 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 13px) 50%;background-size:5px 5px;background-repeat:no-repeat;padding-right:32px}
+.ps-inp:focus{outline:none;border-color:var(--c,#24307A);box-shadow:0 0 0 3px var(--c-t,#ECEEFA)}
+
+/* ---- thẻ Cài đặt chuẩn ---- */
+.ps-set{display:grid;gap:8px}
+.ps-homebtn{display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:12px;width:100%;text-align:left;background:var(--c,#24307A);color:#fff;border:0;border-radius:18px;padding:12px 14px;cursor:pointer;box-shadow:0 3px 0 var(--c-d,#151D52);font-family:inherit;margin-bottom:6px}
+.ps-homebtn>.ps-ic:first-child{width:40px;height:40px;padding:9px;box-sizing:border-box;border-radius:12px;background:rgba(255,255,255,.18)}
+.ps-homebtn b{display:block;font-size:15.5px}
+.ps-homebtn small{display:block;font-size:12.5px;opacity:.85;font-weight:500}
+.ps-homebtn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--c-d,#151D52)}
+.ps-srow{background:#fff;border:1px solid var(--rule,#E3E7F5);border-radius:16px;overflow:hidden}
+.ps-srow__h{display:grid;grid-template-columns:34px 1fr auto 16px;align-items:center;gap:10px;width:100%;border:0;background:transparent;padding:12px 14px;text-align:left;font:inherit;color:var(--ink,#18203F);cursor:pointer}
+.ps-srow--sw .ps-srow__h{grid-template-columns:34px 1fr auto;cursor:default}
+.ps-srow__h>b{font-size:15px;font-weight:600}
+.ps-srow__ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--c-t,#ECEEFA);color:var(--c-d,#151D52)}
+.ps-srow__st{font-size:13px;color:var(--muted,#7A82A3);max-width:46vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ps-srow__h>.ps-ic:last-child{color:var(--muted,#7A82A3);transition:transform .25s}
+.ps-srow__b{display:none;padding:2px 16px 16px;border-top:1px dashed var(--rule,#E3E7F5)}
+.ps-srow.open .ps-srow__b{display:block;animation:psIn .35s cubic-bezier(.32,.72,0,1)}
+.ps-srow.open .ps-srow__h>.ps-ic:last-child{transform:rotate(90deg)}
+.ps-srow--danger .ps-srow__ic{background:#FDECE8;color:#B23A28}
+.ps-srow--danger .ps-srow__h>b{color:#B23A28}
+.ps-fixed{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:12px 0 2px}
+.ps-fixed>div{background:var(--bg,#F4F6FE);border-radius:12px;padding:8px 10px;min-width:0}
+.ps-fixed small{display:block;font-size:11.5px;color:var(--muted,#7A82A3)}
+.ps-fixed b{display:block;font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ps-fixed>div:first-child{grid-column:1/-1}
+.ps-sw{position:relative;width:50px;height:30px;border-radius:999px;border:0;background:#C9CEE0;cursor:pointer;transition:background .2s;padding:0}
+.ps-sw i{position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.2);transition:transform .25s cubic-bezier(.32,.72,0,1)}
+.ps-sw.on{background:var(--ok,#14A874)}
+.ps-sw.on i{transform:translateX(20px)}
+/* PS1.3.36 · Cỡ chữ Vừa / Lớn: nút chọn 2 ô */
+.ps-seg{display:inline-flex;background:#ECEEF4;border-radius:999px;padding:3px;gap:2px;flex:none}
+.ps-seg button{border:0;background:none;border-radius:999px;padding:0 14px;height:30px;font:700 14px/1 inherit;font-family:inherit;color:var(--muted,#6B7088);cursor:pointer;-webkit-tap-highlight-color:transparent}
+.ps-seg button[data-v="l"]{font-size:16px}
+.ps-seg button.on{background:#fff;color:var(--ink,#23252B);box-shadow:0 1px 3px rgba(20,30,60,.18)}
+.ps-ver{text-align:center;font-size:12px;color:var(--muted,#7A82A3);margin:10px 0 4px}
+
+/* ---- hộp thoại ---- */
+.ps-ov{position:fixed;inset:0;z-index:120;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(18,24,52,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);animation:psFade .35s ease}
+.ps-ov__box{width:100%;max-width:430px;max-height:calc(100vh - 36px);overflow:auto;background:#fff;border-radius:26px;padding:22px 20px 18px;text-align:left;box-shadow:0 30px 80px -30px rgba(18,24,52,.6);animation:psPop .4s cubic-bezier(.32,.72,0,1);box-sizing:border-box}
+.ps-ov__box--wide{max-width:560px}
+.ps-ov__ic{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--c-t,#ECEEFA);color:var(--c-d,#151D52);margin-bottom:10px}
+.ps-ov__t{font:700 21px/1.25 var(--h,var(--f,system-ui));margin:0 0 6px;color:var(--ink,#18203F);letter-spacing:-.01em}
+.ps-ov__b{font-size:15px;line-height:1.6;color:var(--ink-2,#4A5275)}
+.ps-ov__b p{margin:6px 0}
+.ps-ov__btns{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.ps-ov__btns .ps-btn{width:100%}
+.ps-chks{display:grid;gap:8px;margin:10px 0}
+.ps-chk{display:flex;gap:12px;align-items:flex-start;background:var(--bg,#F4F6FE);border-radius:14px;padding:10px 12px;cursor:pointer}
+.ps-chk input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--c,#24307A);flex:none}
+.ps-chk b{display:block;font-size:14.5px;color:var(--ink,#18203F)}
+.ps-chk small{display:block;font-size:12.5px;color:var(--muted,#7A82A3)}
+
+/* ---- thông báo ---- */
+.ps-toast{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;pointer-events:none;z-index:140;background:var(--ink,#18203F);color:#fff;border-radius:18px;padding:11px 16px;font-size:14.5px;line-height:1.45;max-width:min(92vw,460px);box-sizing:border-box;transition:opacity .3s,transform .4s cubic-bezier(.32,.72,0,1);box-shadow:0 14px 34px -14px rgba(18,24,52,.7)}
+.ps-toast.show{opacity:1;transform:translate(-50%,0)}
+
+@keyframes psIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+@keyframes psFade{from{opacity:0}to{opacity:1}}
+@keyframes psPop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ps-ov,.ps-ov__box,.ps-srow.open .ps-srow__b{animation:none}.ps-toast,.ps-btn,.ps-sw i{transition:none}}
+@media (max-width:360px){.ps-row2{grid-template-columns:1fr}}
+
+/* ---- cài ứng dụng, cập nhật ---- */
+.ps-steps{margin:8px 0;padding-left:20px;font-size:14.5px;line-height:1.7}
+.ps-steps li{margin:3px 0}
+.ps-update{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:130;display:flex;align-items:center;gap:10px;background:var(--ink,#18203F);color:#fff;border-radius:999px;padding:8px 8px 8px 16px;font-size:14px;box-shadow:0 14px 34px -14px rgba(18,24,52,.7);white-space:nowrap}
+.ps-update button{border:0;border-radius:999px;font:600 14px/1 var(--f,system-ui);padding:9px 14px;background:#F4B63B;color:#3B2A00;cursor:pointer}
+.ps-update .ps-update__x{background:transparent;color:#fff;padding:6px}
+
+/* ---- Shin Routine: khối gợi ý thẻ thói quen trong các khóa (PS1.3.26) ---- */
+.ps-rt{margin:14px 0 0;padding:14px;border-radius:20px;border:1px solid #CFE0F7;background:linear-gradient(180deg,#F3F8FF,#E9F1FD);color:#18203F;font-family:var(--f,"Be Vietnam Pro",system-ui,sans-serif)}
+.ps-rt__hd{display:grid;grid-template-columns:40px 1fr;gap:10px;align-items:center;margin-bottom:10px}
+.ps-rt__shin{width:40px;height:40px;border-radius:12px;background:#2265C5;display:block}
+.ps-rt__hd>div>b{display:block;font-size:15.5px;line-height:1.3}
+.ps-rt__hd>div>small{display:block;font-size:13px;line-height:1.45;color:#4A5275;margin-top:2px}
+.ps-rt__l{display:grid;gap:8px}
+.ps-rt__it{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;padding:10px 10px 10px 12px;border-radius:14px;background:#fff;border:1px solid #D6E3F5;text-decoration:none;color:inherit;-webkit-tap-highlight-color:transparent}
+.ps-rt__it:active{transform:scale(.985)}
+.ps-rt__mk{width:20px;height:20px;border-radius:50%;border:2px solid #B9C7DD;box-sizing:border-box;display:grid;place-items:center;color:#fff}
+.ps-rt__it.is-on .ps-rt__mk{border:0;background:#2E9E6B}
+.ps-rt__n b{display:block;font-size:14.5px;font-weight:600;line-height:1.35}
+.ps-rt__n small{display:block;font-size:12px;color:#2E7D5B;font-weight:600}
+.ps-rt__go{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;font-size:13px;font-weight:700;color:#1F57AE}
+.ps-rt__ft{margin:9px 2px 0;font-size:12.5px;line-height:1.5;color:#5B6488}
+@media (prefers-reduced-motion:reduce){.ps-rt__it:active{transform:none}}
+
+/* ---- PS1.3.34 · dùng như app thật (mọi trang Proskills đều nạp core.css) ----
+   Không bôi đen chữ, nút; không kéo để tải lại; không phóng to; không lướt ngang cả trang.
+   Ô nhập vẫn chọn chữ được. Khu cần cử chỉ riêng (canvas, băng chuyền) tự đặt touch-action của mình. */
+html{overflow-x:hidden;overscroll-behavior:none;touch-action:pan-x pan-y;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{overscroll-behavior:none;overflow-x:clip;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}
+input,textarea,select,[contenteditable],[contenteditable] *,.ps-sel,.ps-sel *{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+img,svg,a{-webkit-user-drag:none}
+
+/* màn "đang mở khóa học" (bấm thẻ khóa ở trang chủ) */
+.ps-going{position:fixed;inset:0;z-index:300;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:var(--gc,#0F4D98);color:#fff;opacity:0;animation:psGoIn .22s ease-out forwards;font:700 17px/1.3 var(--f,"Be Vietnam Pro",system-ui,sans-serif);text-align:center;padding:24px}
+.ps-going small{display:block;font-size:12.5px;font-weight:600;letter-spacing:.08em;opacity:.8}
+.ps-going i{display:flex;gap:7px}
+.ps-going i b{width:10px;height:10px;border-radius:50%;background:#fff;opacity:.35;animation:psDot 1s ease-in-out infinite}
+.ps-going i b:nth-child(2){animation-delay:.15s}.ps-going i b:nth-child(3){animation-delay:.3s}
+@keyframes psGoIn{to{opacity:1}}
+@keyframes psDot{0%,100%{opacity:.35;transform:translateY(0)}40%{opacity:1;transform:translateY(-6px)}}
+@media (prefers-reduced-motion:reduce){.ps-going{animation:none;opacity:1}.ps-going i b{animation:none;opacity:.8}}
+
+/* ---- PS1.3.54 · chấm lưu bài (PS.saveMark): xanh = đã lưu trên máy, đỏ = chưa lưu được. Nhỏ, không chớp.
+   Gắn vào nút Sổ tay của mọi khóa, ảnh đại diện trang chủ và nút Sổ tay của Shin Routine. ---- */
+html.ps-sv [data-act="nb"],html.ps-sv-err [data-act="nb"],html.ps-sv .hbar__av,html.ps-sv-err .hbar__av,html.ps-sv #gear,html.ps-sv-err #gear{position:relative}
+html.ps-sv [data-act="nb"]::after,html.ps-sv .hbar__av::after,html.ps-sv #gear::after,
+html.ps-sv-err [data-act="nb"]::after,html.ps-sv-err .hbar__av::after,html.ps-sv-err #gear::after{content:"";position:absolute;right:1px;bottom:1px;width:8px;height:8px;border-radius:50%;background:#2E9D5B;box-shadow:0 0 0 2px #fff;pointer-events:none}
+html.ps-sv-err [data-act="nb"]::after,html.ps-sv-err .hbar__av::after,html.ps-sv-err #gear::after{background:#E5484D}
+/* hộp "Bài làm đã lưu" cuối Tổng quan (PS.savedHTML) */
+.ps-saved{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:center;margin:14px 0 4px;padding:11px 12px;border-radius:16px;background:#EAF3EE;color:#23302A;font-family:var(--f,"Be Vietnam Pro",system-ui,sans-serif);text-align:left}
+.ps-saved__ic{width:34px;height:34px;border-radius:50%;background:#2E9D5B;color:#fff;display:grid;place-items:center}
+.ps-saved b{display:block;font-size:14.5px;line-height:1.35}
+.ps-saved small{display:block;font-size:12.5px;line-height:1.45;color:#4D5A53}
+.ps-saved--err{background:#FDECEC}.ps-saved--err .ps-saved__ic{background:#E5484D}
+/* thẻ có bản mới (pwa.js) */
+.ps-upd{position:fixed;left:12px;right:12px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:130;max-width:400px;margin:0 auto;background:#fff;color:#18203F;border-radius:24px;padding:14px 14px 10px;box-shadow:0 18px 44px -18px rgba(18,24,52,.55),0 0 0 1px rgba(18,24,52,.06);font-family:var(--f,"Be Vietnam Pro",system-ui,sans-serif);animation:psUpdIn .35s cubic-bezier(.22,.9,.24,1)}
+.ps-upd__h{display:flex;align-items:center;gap:10px;margin-bottom:12px}.ps-upd__h img{border-radius:10px;flex:none}.ps-upd__h b{font-size:16.5px}
+.ps-upd__b{display:grid;grid-template-columns:1.4fr 1fr;gap:8px}.ps-upd__b .ps-btn{width:100%;justify-content:center}
+.ps-upd__n{margin:8px 2px 0;font-size:12.5px;color:#6B7183}
+@keyframes psUpdIn{from{transform:translateY(16px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.ps-upd{animation:none}}
+/* Cài đặt · Học được khi không có internet */
+.ps-offbar{display:block;height:7px;border-radius:9px;background:#E8EBF2;overflow:hidden;margin:4px 0 10px}.ps-offbar i{display:block;height:100%;border-radius:9px;background:#2E9D5B;transition:width .4s}
+
+/* ---- PS1.3.55 · Thanh điều hướng chung trong khóa (ý 25): ‹ về một cấp | tên màn | Sổ tay ---- */
+.psnav{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:0;right:0;z-index:30;pointer-events:none;transition:transform .3s cubic-bezier(.32,.72,0,1),opacity .3s}
+.psnav--hide{transform:translateY(-130%);opacity:0}
+.psnav__in{position:relative;box-sizing:border-box;max-width:560px;height:56px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:8px}
+.psnav__in::before{content:"";position:absolute;inset:0 12px;border-radius:20px;background:rgba(255,255,255,.95);box-shadow:0 1px 0 rgba(20,24,60,.05),0 6px 18px -10px rgba(20,24,60,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.psnav__in>*{position:relative;pointer-events:auto}
+.psnav__bk{flex:none;display:inline-flex;align-items:center;gap:2px;max-width:55%;height:40px;padding:0 14px 0 8px;border:0;border-radius:999px;background:var(--c-t,#ECEEFA);color:var(--c-d,#151D52);font:700 14.5px/1 var(--f,"Be Vietnam Pro",system-ui,sans-serif);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .15s}
+.psnav__bk span{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.psnav__t{flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font:700 15px/1.2 var(--f,"Be Vietnam Pro",system-ui,sans-serif);color:var(--ink,#18203F)}
+.psnav__x{flex:none;width:40px;height:40px;border:0;border-radius:12px;background:transparent;color:var(--c-d,#151D52);display:grid;place-items:center;cursor:pointer}
+.psnav__nb{flex:none;width:42px;height:40px;border:0;border-radius:12px;background:var(--c-t,#ECEEFA);color:var(--c-d,#151D52);display:grid;place-items:center;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .15s}
+.psnav__bk:active,.psnav__nb:active,.psnav__x:active{transform:scale(.94)}
+.psnav__dot{position:absolute;top:5px;right:6px;width:8px;height:8px;border-radius:50%;background:#E5484D;box-shadow:0 0 0 2px #fff}
+@media (min-width:900px){.psnav__in{max-width:620px}}
+@media (prefers-reduced-motion:reduce){.psnav{transition:none}}
