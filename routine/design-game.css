@@ -1,0 +1,73 @@
+/* Reuse the app's role sizes inside the game's separate document. The small
+   decorative lettering on physical game pieces retains its artwork scale. */
+#shinGame19{font:400 var(--shin-body)/1.5 'Be Vietnam Pro','Roboto Flex',Arial,sans-serif}
+#shinGame19 button{font:500 var(--shin-label)/1.4286 'Nunito','Be Vietnam Pro','Roboto Flex',Arial,sans-serif;min-height:48px;border-radius:24px}
+#shinGame19 :is(h1,h2,h3){font-size:var(--shin-section);line-height:1.3334}
+#shinGame19 :is(p,.result14 p,#empty-habits-msg){font-size:var(--shin-label);line-height:1.4286}
+#shinGame19 :is(.result14 b,#hud-title,#hud-toast){font-size:var(--shin-body);line-height:1.5;white-space:normal}
+#shinGame19 :is(.result14-status,#hud-desc,#hud-tag,#selected-count-badge,.game14-small-title){font-size:var(--shin-meta);line-height:1.3334}
+#shinGame19 :is(main,main>header,main>section,.result14){min-width:0;max-width:100%;box-sizing:border-box}
+#shinGame19 .result14-actions{gap:8px;flex-wrap:wrap}
+#shinGame19 .result14-actions button{max-width:100%;white-space:normal}
+#shinGame19 button:focus-visible{outline:2px solid #2265C5;outline-offset:3px}
+@media(max-width:359px){#shinGame19 main>section>.flex{flex-wrap:wrap;gap:8px}}
+
+/* M3.3.33 · Sân tràn màn hình: điều khiển nổi, thông báo trên sân, dải lướt xuống. */
+#shinGame19 .game33-ctl{position:absolute;top:12px;left:12px;z-index:30;width:44px;height:44px;min-height:44px;padding:0;border:1px solid rgba(231,229,228,.9);border-radius:22px;background:rgba(255,255,255,.95);color:#44403C;display:flex;align-items:center;justify-content:center;box-shadow:0 1px 2px rgba(24,24,27,.08)}
+#shinGame19 .game33-top-right{position:absolute;top:12px;right:12px;z-index:30;display:flex;align-items:center;gap:8px}
+#shinGame19 #reset-btn,#shinGame19 #toss-btn{top:64px}
+#shinGame19 .game33-toast{position:absolute;left:50%;top:116px;z-index:25;max-width:calc(100% - 32px);box-sizing:border-box;transform:translate(-50%,-6px);opacity:0;pointer-events:none;padding:8px 14px;border-radius:18px;background:rgba(255,255,255,.96);border:1px solid rgba(231,229,228,.9);box-shadow:0 4px 14px -4px rgba(24,24,27,.16);color:#18181B;text-align:center;transition:opacity .2s ease,transform .2s ease}
+#shinGame19 .game33-toast.show{opacity:1;transform:translate(-50%,0)}
+#shinGame19 .game33-toast i{display:inline-block;width:8px;height:8px;border-radius:4px;margin-right:7px;vertical-align:1px}
+#shinGame19 #game14-results-jump{position:static;order:0;width:100%;height:48px;min-height:48px;border:0;border-top:1px solid #E0E4ED;border-radius:0;box-shadow:none;background:#F9F9FF;color:#204B88;padding:0 16px}
+@media(min-width:480px){#shinGame19 #court-wrapper{border-radius:28px;margin-top:8px;height:calc(100vh - 64px);height:calc(100dvh - 64px)}}
+@media(prefers-reduced-motion:reduce){#shinGame19 .game33-toast{transition:none;transform:translate(-50%,0)}}
+
+/* M3.3.33 · Giao diện game theo Material 3 của app (màu lấy từ components.css :root). */
+#shinGame19{background:#F9F9FF;color:#1A1C22}
+#shinGame19 #court-wrapper.tabletop-surface{background-color:#F1F3FA;background-image:radial-gradient(rgba(116,123,137,.28) 1.2px,transparent 1.2px);background-size:20px 20px;box-shadow:none}
+#shinGame19 .tt-widget{box-shadow:0 1px 2px rgba(0,0,0,.18),0 1px 3px 1px rgba(0,0,0,.08);border:1px solid rgba(26,28,34,.08)}
+#shinGame19 .tt-widget.is-grabbed{box-shadow:0 4px 8px 3px rgba(0,0,0,.12),0 1px 3px rgba(0,0,0,.2),0 0 0 2px #2265C5}
+#shinGame19 .g33-box{width:100%;height:100%;box-sizing:border-box;padding:7px 9px;display:flex;flex-direction:column;justify-content:space-between;gap:3px;min-width:0}
+#shinGame19 .g33-center{align-items:center;justify-content:center;text-align:center;padding:6px}
+#shinGame19 .g33-round{padding:8px!important}
+#shinGame19 .g33-round{padding:10px}
+#shinGame19 .g33-pill{flex-direction:row;align-items:center;padding:4px 8px 4px 14px;gap:6px}
+#shinGame19 .g33-col{display:flex;flex-direction:column;min-width:0;gap:1px}
+#shinGame19 .g33-row{display:flex;align-items:center;justify-content:space-between;gap:4px;min-width:0}
+#shinGame19 .g33-k{font-size:9px;line-height:1.1;font-weight:700;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+#shinGame19 .g33-label{font-size:13px;line-height:1.15;flex-shrink:0;font-weight:800;letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere;min-width:0}
+#shinGame19 .g33-label.g33-l3{-webkit-line-clamp:3}
+#shinGame19 .g33-label.g33-sm{font-size:12px}
+#shinGame19 .g33-chip{flex:none;padding:4px 7px;border-radius:8px;font-size:10px;line-height:1;font-weight:800;letter-spacing:.02em}
+#shinGame19 .g33-dots{display:flex;align-items:center;gap:4px}
+#shinGame19 .g33-dots i{width:6px;height:6px;border-radius:3px}
+#shinGame19 .g33-dots s{flex:1;height:0;border-bottom:1.5px dotted}
+#shinGame19 .g33-clock{width:30px;height:30px;border-radius:15px;background:#0C4A6E;position:relative;flex:none}
+#shinGame19 .g33-clock::before,#shinGame19 .g33-clock i{content:'';position:absolute;left:14px;bottom:15px;width:2.5px;border-radius:2px;background:#BAE6FD}
+#shinGame19 .g33-clock::before{height:10px}
+#shinGame19 .g33-clock i{height:8px;transform-origin:50% 100%;transform:rotate(-60deg)}
+#shinGame19 #hoop-backboard>div{background:#fff;border:1px solid #C5CAD5;border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.12)}
+#shinGame19 #hoop-backboard .border-orange-500{border-color:#2265C5;border-radius:8px}
+#shinGame19 #hoop-foreground>div:first-child{background:#2265C5;border:0;box-shadow:0 1px 2px rgba(0,0,0,.2)}
+#shinGame19 #hoop-foreground>div:first-child>span{background:#2265C5;border-color:#fff}
+#shinGame19 #hoop-net-svg path{stroke:#9AA1AE}
+#shinGame19 .game33-ctl{width:48px;height:48px;min-height:48px;border:0;border-radius:24px;background:rgba(249,249,255,.94);color:#444A57;box-shadow:0 1px 2px rgba(0,0,0,.18),0 1px 3px 1px rgba(0,0,0,.08)}
+#shinGame19 #score-pill{background:#D6E3FF;color:#10366D;border:0;box-shadow:none;min-height:40px;padding:0 16px;border-radius:20px}
+#shinGame19 #sound-toggle{background:#DEE5F3;color:#10366D;border:0;box-shadow:none;min-width:48px;min-height:48px;padding:0;justify-content:center;border-radius:24px}
+#shinGame19 #reset-btn{background:#DEE5F3;color:#10366D;border:0;box-shadow:0 1px 2px rgba(0,0,0,.12);padding:0 16px;border-radius:24px}
+#shinGame19 #toss-btn{background:#2265C5;color:#fff;border:0;box-shadow:0 1px 2px rgba(0,0,0,.2),0 1px 3px 1px rgba(0,0,0,.1);padding:0 20px;border-radius:24px}
+#shinGame19 :is(.game33-ctl,#score-pill,#sound-toggle,#reset-btn,#toss-btn):active{transform:scale(.96)}
+#shinGame19 .game33-toast{background:#2F3036;color:#F1F0F7;border:0;border-radius:12px;box-shadow:0 3px 8px rgba(0,0,0,.2)}
+#shinGame19 #game14-results-jump{background:#F9F9FF;border-top:1px solid #C5CAD5;color:#2265C5}
+#shinGame19 #hud-banner{background:#F1F3FA;border:0;box-shadow:none;border-radius:16px}
+#shinGame19 main>section{border:1px solid #C5CAD5;border-radius:24px;box-shadow:none;background:#fff}
+#shinGame19 #selected-count-badge{background:#DBEFDC;color:#214C32;border-radius:8px}
+#shinGame19 #empty-habits-msg{background:#F1F3FA;border-color:#C5CAD5;border-radius:16px;color:#444A57}
+#shinGame19 .result14{background:#F1F3FA;border:0;border-radius:16px}
+#shinGame19 .result14 button{border-radius:20px;background:#DEE5F3;color:#10366D}
+#shinGame19 .result14 button[data-action=choose]{background:#2265C5;color:#fff}
+#shinGame19 .result14 button[data-action=return]{background:transparent;color:#2265C5}
+#shinGame19 main>header svg path:nth-child(1){fill:#D6E3FF}
+#shinGame19 main>header svg path:nth-child(2){fill:#2265C5}
+#shinGame19 main>header svg path:nth-child(3){fill:#10366D}
